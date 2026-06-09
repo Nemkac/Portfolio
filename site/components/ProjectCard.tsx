@@ -30,7 +30,17 @@ export function ProjectCard({
       style={style}
     >
       <div className="project-thumb" style={card.thumbStyle}>
-        {card.image ? (
+        {card.video ? (
+          <video
+            className="thumb-video"
+            src={card.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label={card.title}
+          />
+        ) : card.image ? (
           <Image
             className="thumb-img"
             src={card.image}

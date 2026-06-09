@@ -795,6 +795,18 @@ p + p { margin-top: 1em; }
 .project-thumb > .thumb-img { transition: transform var(--t-slow) var(--ease); }
 .project-card:hover .project-thumb > .thumb-img { transform: scale(1.04); }
 
+/* Cover videos fill their container (card thumb / case-study hero) like a
+   next/image fill, with the same cover fit + hover zoom. */
+.thumb-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow) var(--ease);
+}
+.project-card:hover .project-thumb > .thumb-video { transform: scale(1.04); }
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;

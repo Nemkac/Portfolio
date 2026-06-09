@@ -15,6 +15,8 @@ export type ProjectCard = {
   span: "span-5" | "span-6" | "span-7" | "span-12";
   /** Web image in /public. When absent, `art` shape is rendered instead. */
   image?: string;
+  /** Looping cover video in /public. Takes precedence over `image`/`art`. */
+  video?: string;
   art?: ThumbArt;
   idx: string;
   when: string;
@@ -45,7 +47,7 @@ export const WORK_CARDS: ProjectCard[] = [
   {
     slug: "cfoainexus",
     span: "span-6",
-    image: "/cfoainexus.jpg",
+    video: "/CFOAINexusCover.mp4",
     idx: "02 / CFOAI Nexus",
     when: "2026",
     metaLeft: "React · Stripe",
@@ -98,7 +100,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
   {
     slug: "cfoainexus",
     span: "span-5",
-    image: "/cfoainexus.jpg",
+    video: "/CFOAINexusCover.mp4",
     idx: "02 / Live",
     when: "2026",
     metaLeft: "Client work · CFOAI Nexus",
@@ -150,6 +152,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
   {
     slug: "petnet",
     span: "span-5",
+    video: "/PetNetCover.mp4",
     art: "t-arc",
     idx: "06 / Hackathon",
     when: "2025",
@@ -204,6 +207,8 @@ export type CaseStudy = {
   when: string;
   status: string;
   image?: string;
+  /** Looping cover video in /public. Takes precedence over `image`/`art`. */
+  video?: string;
   art?: ThumbArt;
   label: string;
   meta: string;
@@ -369,6 +374,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     role: "Full-Stack / Mobile",
     when: "48 hours · 2025",
     status: "Hackathon build",
+    video: "/PetNetCover.mp4",
     art: "t-arc",
     label: "Hackathon / 06",
     meta: "Solana Mobile · 2025",

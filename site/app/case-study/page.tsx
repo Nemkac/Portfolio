@@ -74,7 +74,17 @@ function CaseStudyContent() {
           </Reveal>
 
           <Reveal className="cs-cover" delay={320}>
-            {p.image ? (
+            {p.video ? (
+              <video
+                className="thumb-video"
+                src={p.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label={p.title}
+              />
+            ) : p.image ? (
               <Image
                 className="thumb-img"
                 src={p.image}
