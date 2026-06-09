@@ -70,16 +70,7 @@ export function Experience() {
         ))}
       </div>
 
-      <Reveal
-        as="div"
-        className="about-grid"
-        style={{
-          marginTop: "var(--space-8)",
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr",
-          gap: "var(--space-7)",
-        }}
-      >
+      <Reveal as="div" className="about-grid" style={{ marginTop: "var(--space-8)" }}>
         <div>
           <span className="eyebrow">Education</span>
           <h3 style={{ marginTop: "var(--space-3)" }}>
