@@ -178,7 +178,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section {
-  padding: var(--space-10) 0;
+  padding-block: var(--space-10);
   position: relative;
 }
 .section + .section { border-top: 1px solid var(--border-2); }
@@ -1204,7 +1204,10 @@ p + p { margin-top: 1em; }
   gap: var(--space-7);
   margin-top: var(--space-8);
 }
-@media (max-width: 880px) { .cs-body-grid { grid-template-columns: 1fr; } }
+@media (max-width: 880px) {
+  .cs-body-grid { grid-template-columns: 1fr; }
+  .cs-side { position: static; top: auto; }
+}
 .cs-block + .cs-block { margin-top: var(--space-7); }
 .cs-block h2 {
   font-size: clamp(28px, 1.6vw + 16px, 40px);
